@@ -11,6 +11,8 @@ public class GalgjeWord {
     Random rand = new Random();
     int random_int = rand.nextInt(rand.nextInt(listOfWords.length -1));
 
+    List<String> lijst = new ArrayList<>();
+
 
 
 //Er wordt een nieuw galgjewoord gemaakt, door uit lijst van woorden een random index woord eruit te halen
@@ -18,6 +20,20 @@ public class GalgjeWord {
         wordToBeGuessed = list[randomInt].toUpperCase();
     }
 
+    public void createGalgjeWord() {
+        try {
+            File myObj = new File("C:\\Users\\jasmi\\IdeaProjects\\Galgje4\\src\\resources\\filename.txt");
+            Scanner myReader = new Scanner(myObj);
 
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                this.lijst.add(data);
+            }
 
+            myReader.close();
+        } catch (FileNotFoundException var4) {
+            System.out.println("An error occurred.");
+            var4.printStackTrace();
+        }
+    }
 }
