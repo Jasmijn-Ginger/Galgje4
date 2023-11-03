@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 public class GalgjeWordTest {
 
     GalgjeWord galgjeWord = new GalgjeWord();
@@ -49,6 +51,17 @@ public class GalgjeWordTest {
         Assertions.assertEquals(expectedOutcome, expectedResult);
     }
 
+    @Test
+    public void TestExternalDocument(){
+        String expectedOutcome = "ALPHA";
+        galgjeWord.createGalgjeWord(1, new File("C:\\Users\\jasmi\\IdeaProjects\\Galgje4\\src\\resources\\filename.txt"));
+        Assertions.assertEquals(expectedOutcome, GalgjeWord.wordToBeGuessed);
+    }
 
-
+    @Test
+    public void TestExternalDocument2(){
+        String expectedOutcome = "EPSILON";
+        galgjeWord.createGalgjeWord(5, new File("C:\\Users\\jasmi\\IdeaProjects\\Galgje4\\src\\resources\\filename.txt"));
+        Assertions.assertEquals(expectedOutcome, GalgjeWord.wordToBeGuessed);
+    }
 }

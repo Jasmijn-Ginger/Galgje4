@@ -11,7 +11,7 @@ public class GalgjeWord {
     Random rand = new Random();
     int random_int = rand.nextInt(rand.nextInt(listOfWords.length -1));
 
-    List<String> lijst = new ArrayList<>();
+    public List<String> lijst = new ArrayList<>();
 
 
 
@@ -20,10 +20,9 @@ public class GalgjeWord {
         wordToBeGuessed = list[randomInt].toUpperCase();
     }
 
-    public void createGalgjeWord() {
+    public void createGalgjeWord(int randomInt, File file) {
         try {
-            File myObj = new File("C:\\Users\\jasmi\\IdeaProjects\\Galgje4\\src\\resources\\filename.txt");
-            Scanner myReader = new Scanner(myObj);
+            Scanner myReader = new Scanner(file);
 
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
@@ -35,5 +34,7 @@ public class GalgjeWord {
             System.out.println("An error occurred.");
             var4.printStackTrace();
         }
+        wordToBeGuessed = lijst.get(randomInt).toUpperCase();
+
     }
 }

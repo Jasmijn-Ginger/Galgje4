@@ -1,3 +1,5 @@
+import java.io.File;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,8 +17,10 @@ public class Main {
 
 
         GalgjeWord galgjeWord = new GalgjeWord();
-        galgjeWord.createGalgjeWord();
-        System.out.println(galgjeWord.lijst);
+        galgjeWord.createGalgjeWord(3, new File("C:\\Users\\jasmi\\IdeaProjects\\Galgje4\\src\\resources\\filename.txt"));
+
+//        galgjeWord.createGalgjeWord(0, GalgjeWord.listOfWords);
+        System.out.println(GalgjeWord.wordToBeGuessed);
     }
 
 }
