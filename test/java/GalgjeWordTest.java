@@ -54,14 +54,14 @@ public class GalgjeWordTest {
     @Test
     public void TestExternalDocument(){
         String expectedOutcome = "ALPHA";
-        galgjeWord.createGalgjeWord(1, new File("C:\\Users\\jasmi\\IdeaProjects\\Galgje4\\src\\resources\\filename.txt"));
+        galgjeWord.createGalgjeWord(1, new File("C:\\Users\\jasmi\\IdeaProjects\\Galgje4\\src\\resources\\ExternalListGalgjeWords.txt"));
         Assertions.assertEquals(expectedOutcome, GalgjeWord.wordToBeGuessed);
     }
 
     @Test
     public void TestExternalDocument2(){
         String expectedOutcome = "EPSILON";
-        galgjeWord.createGalgjeWord(5, new File("C:\\Users\\jasmi\\IdeaProjects\\Galgje4\\src\\resources\\filename.txt"));
+        galgjeWord.createGalgjeWord(5, new File("C:\\Users\\jasmi\\IdeaProjects\\Galgje4\\src\\resources\\ExternalListGalgjeWords.txt"));
         Assertions.assertEquals(expectedOutcome, GalgjeWord.wordToBeGuessed);
     }
 }
