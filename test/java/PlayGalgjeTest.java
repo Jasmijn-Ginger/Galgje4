@@ -23,12 +23,12 @@ class PlayGalgjeTest {
         System.setOut(standardOut);
     }
 
-//    @Test
-//    public void testMessage(){
-//        PlayGalgje playGalgje = new PlayGalgje();
-//        playGalgje.InitializeGame();
-//        Assertions.assertEquals("Welkom bij Galgje. Je kan 10 fouten maken om het woord te raden. Succes!", outputStreamCaptor.toString().trim());
-//
-//    }
+    @Test
+    public void testMessage(){
+        PlayGalgje playGalgje = new PlayGalgje();
+        playGalgje.InitializeGame();
+        Assertions.assertEquals("Welkom bij Galgje. Je kan 10 fouten maken om het woord te raden. Succes!", outputStreamCaptor.toString().trim());
+
+    }
 
 }
