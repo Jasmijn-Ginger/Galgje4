@@ -16,8 +16,9 @@ public class InputUserTest {
     }
 
 //nog manier vinden om te resetten. Kom er niet uit.
-    void provideInput(String data) {
-        ByteArrayInputStream testIn = new ByteArrayInputStream(data.getBytes());
+    @BeforeAll
+    static void provideInput() {
+        ByteArrayInputStream testIn = new ByteArrayInputStream("yes\r\na".getBytes());
         System.setIn(testIn);
     }
 
@@ -25,14 +26,14 @@ public class InputUserTest {
 
     @Test
     void givenName_whenReadFromInput_thenReturnCorrectResult() {
-        provideInput("a");
+        //provideInput("a");
         String input = InputUser.getInputUser();
         Assertions.assertEquals("A", input);
     }
 
     @Test
     void getAnswerTest(){
-        provideInput("yes");
+        //provideInput("yes");
         String input = InputUser.getAnswer();
         Assertions.assertEquals("YES", input);
     }

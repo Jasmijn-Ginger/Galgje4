@@ -18,6 +18,7 @@ public class Main {
 
         GalgjeWord galgjeWord = new GalgjeWord();
         galgjeWord.createGalgjeWord(3, new File("C:\\Users\\jasmi\\IdeaProjects\\Galgje4\\src\\resources\\ExternalListGalgjeWords.txt"));
+//ToDo uitlezen lokaal
 
 //        galgjeWord.createGalgjeWord(0, GalgjeWord.listOfWords);
         System.out.println(GalgjeWord.wordToBeGuessed);
